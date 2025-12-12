@@ -15,10 +15,10 @@ Original file is located at
 
 # 1. Create Variables
 
-participant_num = [1, 2, 3, 4, 5, 6]
+participant_ids = [1, 2, 3, 4, 5, 6]
 gender = ["female", "male", "female", "male", "female", "male"]
 age = [23, 30, 19, 27, 25, 29]
-depression_value = [0, 1, 0, 1, 0, 1]
+depression_scores = [0, 1, 0, 1, 0, 1]
 
 
 # 2. Create DataFrame
@@ -26,14 +26,15 @@ depression_value = [0, 1, 0, 1, 0, 1]
 import pandas as pd
 
 df = pd.DataFrame({
-    "participant_num": participant_num,
+    "participant_num": participant_ids,
     "gender": gender,
     "age": age,
-    "depression": depression_value
+    "depression": depression_scores
 })
 
 
 # 3. Save to CSV
 
-df.to_csv("week1_assignment.csv")
+df.to_csv("week1_assignment.csv", index=False)
+print("Week 1 assignment dataframe:")
 print(df)
