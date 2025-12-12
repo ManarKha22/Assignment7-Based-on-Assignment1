@@ -12,13 +12,15 @@ Original file is located at
 # ID: 211877873
 # Name: Manar Khalaila
 
+import numpy as np
 
 # 1. Create Variables
 
-participant_ids = [1, 2, 3, 4, 5, 6]
-gender = ["female", "male", "female", "male", "female", "male"]
-age = [23, 30, 19, 27, 25, 29]
-depression_scores = [0, 1, 0, 1, 0, 1]
+participant_ids = np.arange(1, 7)
+np.random.seed(1)
+gender = np.random.choice(["female", "male"], size=6)
+age = np.random.randint(15, 41, size=6)
+depression_scores = np.array([0, 1, 0, 1, 0, 1])
 
 
 # 2. Create DataFrame
